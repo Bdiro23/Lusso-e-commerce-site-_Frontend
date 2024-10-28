@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.contact-form-container {
+    padding: 40px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.allcon {
+    margin-bottom: 40px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 2s  step-end;
+
+}
+.allcon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.contact_title {
+    text-align: center;
+    font-size: 32px;
+
+
+
+    padding-bottom: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.field-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+    margin:auto;
+
+}
+
+.field-wrap label {
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.field-wrap .req {
+    color: red;
+}
+
+.field-wrap input,
+.field-wrap textarea {
+
+    padding: 12px;
+    border-radius: 5px;
+    color:whitesmoke;
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.field-wrap input:focus,
+.field-wrap textarea:focus {
+
+    outline: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+
+.button-b {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    width:10%;
+    margin:auto;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-b:hover {
+    background-color: #5149b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .contact_title {
+        font-size: 28px;
+    }
+
+    .field-wrap label {
+        font-size: 16px;
+    }
+
+    .field-wrap input,
+    .field-wrap textarea {
+        font-size: 14px;
+    }
+
+    .button-b {
+        font-size: 20px;
+        width: 30%;
+    }
+}

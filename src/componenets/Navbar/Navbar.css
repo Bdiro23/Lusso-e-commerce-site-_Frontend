@@ -1,0 +1,245 @@
+.all {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 2s step-end;
+}
+
+.all.contact-page {
+    height: 800px;
+}
+
+.all.has-before::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar, .section {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: red;
+    font-size: 60px;
+    padding-right: 10px;
+}
+
+h1 {
+    font-family: Rust, sans-serif;
+    color: Black;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover, .panier:hover, .favoris-icon:hover {
+    color: #FFD700;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+nav a:active, .panier:active, .favoris-icon:active {
+    color: darkred;
+    transform: scale(0.95);
+}
+
+.panier-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.panier, .favoris-icon {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.user-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.user-icon {
+
+    font-size: 25px;
+    cursor: pointer;
+    color:black;
+}
+
+.logout-button {
+    background-color: darkorange;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    cursor: pointer;
+}
+
+.logout-button :hover{
+    color:darkorange;
+    background-color:white;
+}
+
+.user-menu:hover .logout-button {
+    display: block;
+    cursor:pointer;
+}
+
+.nav-button, .nav-button1 {
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button {
+    background-color: darkorange;
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: darkorange;
+}
+
+.nav-button1 {
+    background-color: white;
+    color: darkorange;
+}
+
+.nav-button1:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.language-switcher button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.section {
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+    height: 220px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scroll-button {
+    background-color: darkorange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.scroll-button:hover {
+    background-color: white;
+    color: darkorange;
+}
+
+@media screen and (max-width: 1200px) {
+    .all {
+        height: 600px;
+    }
+    .section p {
+        font-size: 20px;
+    }
+}
